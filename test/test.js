@@ -22,7 +22,7 @@ it("should run", async () => {
   await fsp.emptyDir(directory)
   const gitRepository = simpleGit(directory)
   await gitRepository.init()
-  if (process.env.CI) { // GitHub Action fails if user.name and user.email are not set
+  if (process.env.GITHUB_ACTION) { // GitHub Action fails if user.name and user.email are not set
     const gitConfig = {
       "user.name": "GitHub Action",
       "user.email": "action@github.com",
