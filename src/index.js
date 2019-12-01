@@ -40,7 +40,7 @@ export default async (message = "Commit from script", options = {}) => {
     debug("0 changes")
     return 0
   }
-  debug(`Changes: ${changes.files.join(", ")}`)
+  debug(`Changes: ${gitStatus.files.join(", ")}`)
   debug("git add --all")
   await gitRepository.raw(["add", "--all"])
   debug(`git commit --all --message ${message}`)
