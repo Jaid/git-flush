@@ -3,6 +3,7 @@ import path from "path"
 import simpleGit from "simple-git/promise"
 import fsp from "@absolunet/fsp"
 import ms from "ms.macro"
+import execa from "execa"
 
 const indexModule = (process.env.MAIN ? path.resolve(process.env.MAIN) : path.join(__dirname, "..", "src")) |> require
 
@@ -20,7 +21,16 @@ it("should run", async () => {
   await gitRepository.init()
   const resultBefore = await gitFlush(commitMessage, {directory})
   expect(resultBefore).toBe(0)
-  await fsp.outputFile(path.join(directory, ".gitconfig"), "[user]\nname=Jaid\nemail=jaid.jsx@gmail.com")
+  if (process.env.CI) { // GitHub Action fails if user.name and user.email are not set
+    const gitConfig = {
+      "user.name": "GitHub Action",
+      "user.email": "action@github.com",
+    }
+    for (const [key, value] of Object.entries(gitConfig)) {
+      await execa("git", ["config", "--local", key, value])
+    }
+  }
+  await fsp.outputFile(path.join(directory, "test.txt"), "hi")
   const resultAfter = await gitFlush(commitMessage, {directory})
   expect(resultAfter).toBe(1)
   const resultFinal = await gitFlush(commitMessage, {directory})
