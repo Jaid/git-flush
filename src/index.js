@@ -37,7 +37,7 @@ export default async (message = "Commit from script", options = {}) => {
     return 0
   }
   await gitRepository.raw(["add", "--all"])
-  await gitRepository.commit(["add", "--all", "--message", message])
+  await gitRepository.raw(["commit", "add", "--all", "--message", message])
   if (normalizedOptions.push) {
     await gitRepository.push()
   }
