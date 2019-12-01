@@ -13,6 +13,9 @@ const indexModule = (process.env.MAIN ? path.resolve(process.env.MAIN) : path.jo
 const {default: gitFlush} = indexModule
 
 it("should run", async () => {
+  for (const [key, value] of Object.entries(process.env)) {
+    console.log(`process.env.${key} = ${value}`)
+  }
   const commitMessage = "abc"
   const directory = path.join(__dirname, "..", "dist", "test", "repo")
   await fsp.mkdirp(directory)
