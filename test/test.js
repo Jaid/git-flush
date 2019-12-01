@@ -19,8 +19,6 @@ it("should run", async () => {
   await fsp.emptyDir(directory)
   const gitRepository = simpleGit(directory)
   await gitRepository.init()
-  const resultBefore = await gitFlush(commitMessage, {directory})
-  expect(resultBefore).toBe(0)
   if (process.env.CI) { // GitHub Action fails if user.name and user.email are not set
     const gitConfig = {
       "user.name": "GitHub Action",
@@ -30,6 +28,8 @@ it("should run", async () => {
       await execa("git", ["config", "--local", key, value])
     }
   }
+  const resultBefore = await gitFlush(commitMessage, {directory})
+  expect(resultBefore).toBe(0)
   await fsp.outputFile(path.join(directory, "test.txt"), "hi")
   const resultAfter = await gitFlush(commitMessage, {directory})
   expect(resultAfter).toBe(1)
