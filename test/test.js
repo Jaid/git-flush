@@ -1,5 +1,6 @@
 import path from "path"
-import os from "os"
+
+import simpleGit from "simple-git/promise"
 
 const indexModule = (process.env.MAIN ? path.resolve(process.env.MAIN) : path.join(__dirname, "..", "src")) |> require
 
@@ -8,12 +9,8 @@ const indexModule = (process.env.MAIN ? path.resolve(process.env.MAIN) : path.jo
    */
 const {default: gitFlush} = indexModule
 
-it("should run for a non-repository", async () => {
-  const result = await gitFlush(os.homedir())
-  expect(result).toBe(null)
-})
-
-it("should run for this project", async () => {
+it("should run", async () => {
+  const directory = path.join(__dirname, "..", "dist", "test", "repo")
+  const gitRepository = simpleGit(simpleGit)
   const result = await gitFlush(path.join(__dirname, ".."))
-  expect(typeof result).toBe("boolean")
 })
