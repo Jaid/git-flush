@@ -7,11 +7,12 @@ const debug = require("debug")(_PKG_NAME)
 /**
  * @typedef {Object} Options
  * @prop {string} directory Path to the git repository
- * @prop {boolean} push
+ * @prop {boolean} push If `true`, pushes after committing
+ * @prop {boolean} pull If `true`, pulls before committing
  */
 
 /**
- * If repository is dirty, the changes will be stashed, commited and optionally pushed. If repository is clean, does nothing.
+ * If repository is dirty, the changes will be stashed, committed and optionally pushed. If repository is clean, does nothing.
  * @param {string} [message="Commit from script"]
  * @param {Options} [options={}]
  * @returns {Promise<null|number>} `null` if directory is not a git repository, `number` of commit changes if directory is a git repository
@@ -26,6 +27,7 @@ export default async (message = "Commit from script", options = {}) => {
   const normalizedOptions = {
     directory: "",
     push: false,
+    pull: true,
     ...options,
   }
   const gitRepository = simpleGit(normalizedOptions.directory)
@@ -41,12 +43,12 @@ export default async (message = "Commit from script", options = {}) => {
     return 0
   }
   debug(`Changes: ${gitStatus.files.map(file => file.path).join(", ")}`)
-  debug("git add --all")
+  if (normalizedOptions.pull) {
+    await gitRepository.raw("pull")
+  }
   await gitRepository.raw(["add", "--all"])
-  debug(`git commit --all --message ${message}`)
   await gitRepository.raw(["commit", "--all", "--message", message])
   if (normalizedOptions.push) {
-    debug("git push")
     await gitRepository.push()
   }
   debug(`Return ${changes}`)
