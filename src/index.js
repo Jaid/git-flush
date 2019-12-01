@@ -33,7 +33,7 @@ export default async (message = "Commit from script", options = {}) => {
   }
   const gitStatus = await gitRepository.status()
   const changes = gitStatus.files?.length || 0
-  if (!changes) {
+  if (changes === 0) {
     return 0
   }
   await gitRepository.raw(["add", "--all"])
