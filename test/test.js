@@ -25,7 +25,9 @@ it("should run", async () => {
       "user.email": "action@github.com",
     }
     for (const [key, value] of Object.entries(gitConfig)) {
-      await exec("git", ["config", "--local", key, value])
+      await exec("git", ["config", "--local", key, value], {
+        cwd: directory,
+      })
     }
   }
   const resultBefore = await gitFlush(commitMessage, {directory})
