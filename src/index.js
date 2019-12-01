@@ -2,6 +2,8 @@
 
 import simpleGit from "simple-git/promise"
 
+const debug = require("debug")(_PKG_NAME)
+
 /**
  * @typedef {Object} Options
  * @prop {string} directory Path to the git repository
@@ -27,6 +29,7 @@ export default async (message = "Commit from script", options = {}) => {
     ...options,
   }
   const gitRepository = simpleGit(normalizedOptions.directory)
+  debug(`Directory: ${normalizedOptions.directory}`)
   const isGitRepository = await gitRepository.checkIsRepo()
   if (!isGitRepository) {
     return null
@@ -34,12 +37,18 @@ export default async (message = "Commit from script", options = {}) => {
   const gitStatus = await gitRepository.status()
   const changes = gitStatus.files?.length || 0
   if (changes === 0) {
+    debug("0 changes")
     return 0
   }
+  debug(`Changes: ${changes.files.join(", ")}`)
+  debug("git add --all")
   await gitRepository.raw(["add", "--all"])
-  await gitRepository.raw(["commit", "add", "--all", "--message", message])
+  debug(`git commit --all --message ${message}`)
+  await gitRepository.raw(["commit", "--all", "--message", message])
   if (normalizedOptions.push) {
+    debug("git push")
     await gitRepository.push()
   }
+  debug(`Return ${changes}`)
   return changes
 }
