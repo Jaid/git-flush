@@ -30,11 +30,20 @@ it("should run", async () => {
       })
     }
   }
-  const resultBefore = await gitFlush(commitMessage, {directory})
+  const resultBefore = await gitFlush(commitMessage, {
+    directory,
+    pull: false,
+  })
   expect(resultBefore).toBe(0)
   await fsp.outputFile(path.join(directory, "test.txt"), "hi")
-  const resultAfter = await gitFlush(commitMessage, {directory})
+  const resultAfter = await gitFlush(commitMessage, {
+    directory,
+    pull: false,
+  })
   expect(resultAfter).toBe(1)
-  const resultFinal = await gitFlush(commitMessage, {directory})
+  const resultFinal = await gitFlush(commitMessage, {
+    directory,
+    pull: false,
+  })
   expect(resultFinal).toBe(0)
 }, ms`20 seconds`)

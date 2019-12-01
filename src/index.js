@@ -44,7 +44,7 @@ export default async (message = "Commit from script", options = {}) => {
   }
   debug(`Changes: ${gitStatus.files.map(file => file.path).join(", ")}`)
   if (normalizedOptions.pull) {
-    await gitRepository.raw("pull")
+    await gitRepository.raw(["pull"])
   }
   await gitRepository.raw(["add", "--all"])
   await gitRepository.raw(["commit", "--all", "--message", message])
