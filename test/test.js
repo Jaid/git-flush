@@ -13,6 +13,7 @@ const {default: gitFlush} = indexModule
 it("should run", async () => {
   const directory = path.join(__dirname, "..", "dist", "test", "repo")
   await fsp.mkdirp(directory)
+  await fsp.emptyDir(directory)
   const gitRepository = simpleGit(directory)
   const resultBefore = await gitFlush("abc", {directory})
 })
