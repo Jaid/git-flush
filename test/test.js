@@ -14,7 +14,7 @@ const {default: gitFlush} = indexModule
 
 it("should run", async () => {
   for (const [key, value] of Object.entries(process.env)) {
-    console.log(`process.env.${key} = ${value}`)
+    process.stdout.write(`process.env.${key} = ${value}\n`)
   }
   const commitMessage = "abc"
   const directory = path.join(__dirname, "..", "dist", "test", "repo")
