@@ -16,4 +16,5 @@ it("should run", async () => {
   await fsp.emptyDir(directory)
   const gitRepository = simpleGit(directory)
   const resultBefore = await gitFlush("abc", {directory})
+  expect(resultBefore).toBe(null)
 })
