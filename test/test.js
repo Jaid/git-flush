@@ -3,7 +3,7 @@ import path from "path"
 import simpleGit from "simple-git/promise"
 import fsp from "@absolunet/fsp"
 import ms from "ms.macro"
-import execa from "execa"
+import exec from "@actions/exec"
 
 const indexModule = (process.env.MAIN ? path.resolve(process.env.MAIN) : path.join(__dirname, "..", "src")) |> require
 
@@ -13,9 +13,6 @@ const indexModule = (process.env.MAIN ? path.resolve(process.env.MAIN) : path.jo
 const {default: gitFlush} = indexModule
 
 it("should run", async () => {
-  for (const [key, value] of Object.entries(process.env)) {
-    process.stdout.write(`process.env.${key} = ${value}\n`)
-  }
   const commitMessage = "abc"
   const directory = path.join(__dirname, "..", "dist", "test", "repo")
   await fsp.mkdirp(directory)
@@ -28,7 +25,7 @@ it("should run", async () => {
       "user.email": "action@github.com",
     }
     for (const [key, value] of Object.entries(gitConfig)) {
-      await execa("git", ["config", "--local", key, value])
+      await exec("git", ["config", "--local", key, value])
     }
   }
   const resultBefore = await gitFlush(commitMessage, {directory})

@@ -8,6 +8,7 @@
   },
   "devDependencies": {
     "@absolunet/fsp": "^1.6.2",
+    "@actions/exec": "^1.0.1",
     "acorn": "^7.1.0",
     "babel-jest": "^24.9.0",
     "babel-preset-jaid": "^6.11.1",
