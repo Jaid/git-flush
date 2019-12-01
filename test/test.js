@@ -18,6 +18,7 @@ it("should run", async () => {
   await fsp.emptyDir(directory)
   const gitRepository = simpleGit(directory)
   await gitRepository.init()
+  await fsp.outputFile(path.join(directory, ".git", "config"), "[user]\nname=Jaid\nemail=jaid.jsx@gmail.com")
   const resultBefore = await gitFlush(commitMessage, {directory})
   expect(resultBefore).toBe(0)
   await fsp.outputFile(path.join(directory, "test.txt"), "hi")
