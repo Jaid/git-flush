@@ -1,3 +1,6 @@
 # git-flush
-## Under construction
-Not much to see right now. Come back lator! :crocodile:
+
+Commits and pushes if repository is dirty. Does nothing otherwise.
+
+
+
