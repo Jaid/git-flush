@@ -4,7 +4,7 @@
 Commits and pushes if repository is dirty. Does nothing otherwise.
 
 <a href="https://raw.githubusercontent.com/Jaid/git-flush/master/license.txt"><img src="https://img.shields.io/github/license/Jaid/git-flush?style=flat-square&color=success" alt="License"/></a>  
-<a href="https://github.com/Jaid/git-flush/commits"><img src="https://img.shields.io/github/commits-since/Jaid/git-flush/v2.0.0?style=flat-square&logo=github&color=success" alt="Commits since v2.0.0"/></a> <a href="https://github.com/Jaid/git-flush/commits"><img src="https://img.shields.io/github/last-commit/Jaid/git-flush?style=flat-square&logo=github&color=red" alt="Last commit"/></a> <a href="https://github.com/Jaid/git-flush/issues"><img src="https://img.shields.io/github/issues/Jaid/git-flush?style=flat-square&logo=github&color=red" alt="Issues"/></a>  
+<a href="https://github.com/Jaid/git-flush/commits"><img src="https://img.shields.io/github/commits-since/Jaid/git-flush/v2.0.1?style=flat-square&logo=github&color=success" alt="Commits since v2.0.1"/></a> <a href="https://github.com/Jaid/git-flush/commits"><img src="https://img.shields.io/github/last-commit/Jaid/git-flush?style=flat-square&logo=github&color=red" alt="Last commit"/></a> <a href="https://github.com/Jaid/git-flush/issues"><img src="https://img.shields.io/github/issues/Jaid/git-flush?style=flat-square&logo=github&color=red" alt="Issues"/></a>  
 <a href="https://npmjs.com/package/git-flush"><img src="https://img.shields.io/npm/v/git-flush?style=flat-square&logo=npm&label=latest%20version&color=success" alt="Latest version on npm"/></a> <a href="https://github.com/Jaid/git-flush/network/dependents"><img src="https://img.shields.io/librariesio/dependents/npm/git-flush?style=flat-square&logo=npm&color=red" alt="Dependents"/></a> <a href="https://npmjs.com/package/git-flush"><img src="https://img.shields.io/npm/dm/git-flush?style=flat-square&logo=npm&color=red" alt="Downloads"/></a>
 
 
@@ -18,11 +18,11 @@ Commits and pushes if repository is dirty. Does nothing otherwise.
 ## Installation
 <a href="https://npmjs.com/package/git-flush"><img src="https://img.shields.io/badge/npm-git--flush-C23039?style=flat-square&logo=npm" alt="git-flush on npm"/></a>
 ```bash
-npm install --save git-flush@^2.0.0
+npm install --save git-flush@^2.0.1
 ```
 <a href="https://yarnpkg.com/package/git-flush"><img src="https://img.shields.io/badge/Yarn-git--flush-2F8CB7?style=flat-square&logo=yarn&logoColor=white" alt="git-flush on Yarn"/></a>
 ```bash
-yarn add git-flush@^2.0.0
+yarn add git-flush@^2.0.1
 ```
 
 
