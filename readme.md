@@ -3,25 +3,42 @@
 
 Commits and pushes if repository is dirty. Does nothing otherwise.
 
+<a href="https://raw.githubusercontent.com/Jaid/git-flush/master/license.txt"><img src="https://img.shields.io/github/license/Jaid/git-flush?style=flat-square&color=success" alt="License"/></a>  
+<a href="https://github.com/Jaid/git-flush/commits"><img src="https://img.shields.io/github/commits-since/Jaid/git-flush/v2.0.0?style=flat-square&logo=github&color=success" alt="Commits since v2.0.0"/></a> <a href="https://github.com/Jaid/git-flush/commits"><img src="https://img.shields.io/github/last-commit/Jaid/git-flush?style=flat-square&logo=github&color=red" alt="Last commit"/></a> <a href="https://github.com/Jaid/git-flush/issues"><img src="https://img.shields.io/github/issues/Jaid/git-flush?style=flat-square&logo=github&color=red" alt="Issues"/></a>  
+<a href="https://npmjs.com/package/git-flush"><img src="https://img.shields.io/npm/v/git-flush?style=flat-square&logo=npm&label=latest%20version&color=success" alt="Latest version on npm"/></a> <a href="https://github.com/Jaid/git-flush/network/dependents"><img src="https://img.shields.io/librariesio/dependents/npm/git-flush?style=flat-square&logo=npm&color=red" alt="Dependents"/></a> <a href="https://npmjs.com/package/git-flush"><img src="https://img.shields.io/npm/dm/git-flush?style=flat-square&logo=npm&color=red" alt="Downloads"/></a>
+
+
+
+
+
+
+
+
+
 ## Installation
-<a href='https://npmjs.com/package/git-flush'><img alt='npm logo' src='https://github.com/Jaid/action-readme/raw/master/images/base-assets/npm.png'/></a>
+<a href="https://npmjs.com/package/git-flush"><img src="https://img.shields.io/badge/npm-git--flush-C23039?style=flat-square&logo=npm" alt="git-flush on npm"/></a>
 ```bash
 npm install --save git-flush@^2.0.0
 ```
-<a href='https://yarnpkg.com/package/git-flush'><img alt='Yarn logo' src='https://github.com/Jaid/action-readme/raw/master/images/base-assets/yarn.png'/></a>
+<a href="https://yarnpkg.com/package/git-flush"><img src="https://img.shields.io/badge/Yarn-git--flush-2F8CB7?style=flat-square&logo=yarn&logoColor=white" alt="git-flush on Yarn"/></a>
 ```bash
 yarn add git-flush@^2.0.0
 ```
 
 
 
-## Documentation
+<a name="module_git-flush"></a>
+
+## Reference
 
 * [git-flush](#module_git-flush)
     * [module.exports([message], [options])](#exp_module_git-flush--module.exports) ⇒ <code>Promise.&lt;(null\|number)&gt;</code> ⏏
         * [~normalizedOptions](#module_git-flush--module.exports..normalizedOptions) : <code>Options</code>
         * [~Options](#module_git-flush--module.exports..Options) : <code>Object</code>
 
+<a name="exp_module_git-flush--module.exports"></a>
+
+### module.exports([message], [options]) ⇒ <code>Promise.&lt;(null\|number)&gt;</code> ⏏
 If repository is dirty, the changes will be stashed, committed and optionally pushed. If repository is clean, does nothing.
 
 **Kind**: Exported function  
@@ -37,7 +54,13 @@ If repository is dirty, the changes will be stashed, committed and optionally pu
 import gitFlush from "git-flush"
 const result = await gitFlush("Commit message")
 ```
+<a name="module_git-flush--module.exports..normalizedOptions"></a>
+
+#### module.exports~normalizedOptions : <code>Options</code>
 **Kind**: inner constant of [<code>module.exports</code>](#exp_module_git-flush--module.exports)  
+<a name="module_git-flush--module.exports..Options"></a>
+
+#### module.exports~Options : <code>Object</code>
 **Kind**: inner typedef of [<code>module.exports</code>](#exp_module_git-flush--module.exports)  
 **Properties**
 
@@ -46,6 +69,9 @@ const result = await gitFlush("Commit message")
 | directory | <code>string</code> | Path to the git repository |
 | push | <code>boolean</code> | If `true`, pushes after committing |
 | pull | <code>boolean</code> | If `true`, pulls before committing |
+
+
+
 
 
 
