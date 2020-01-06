@@ -13,8 +13,8 @@ const debug = require("debug")(_PKG_NAME)
 
 /**
  * If repository is dirty, the changes will be stashed, committed and optionally pushed. If repository is clean, does nothing.
- * @param {string} [message="Commit from script"]
- * @param {Options} [options={}]
+ * @param {string} [message = "Commit from script"]
+ * @param {Options} [options = {}]
  * @returns {Promise<null|number>} `null` if directory is not a git repository, `number` of commit changes if directory is a git repository
  * @example
  * import gitFlush from "git-flush"
@@ -46,8 +46,8 @@ export default async (message = "Commit from script", options = {}) => {
   if (normalizedOptions.pull) {
     await gitRepository.raw(["pull"])
   }
-  await gitRepository.raw(["add", "--all"])
-  await gitRepository.raw(["commit", "--all", "--message", message])
+  await gitRepository.add("--all")
+  await gitRepository.commit(message, "--all")
   if (normalizedOptions.push) {
     await gitRepository.push()
   }

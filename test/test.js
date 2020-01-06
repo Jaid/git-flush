@@ -1,9 +1,8 @@
-import path from "path"
-
-import simpleGit from "simple-git/promise"
 import fsp from "@absolunet/fsp"
-import ms from "ms.macro"
 import {exec} from "@actions/exec"
+import ms from "ms.macro"
+import path from "path"
+import simpleGit from "simple-git/promise"
 
 const indexModule = (process.env.MAIN ? path.resolve(process.env.MAIN) : path.join(__dirname, "..", "src")) |> require
 
