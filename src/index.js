@@ -13,7 +13,7 @@ const debug = require("debug")(_PKG_NAME)
 
 /**
  * If repository is dirty, the changes will be stashed, committed and optionally pushed. If repository is clean, does nothing.
- * @param {string} [message = "Commit from script"]
+ * @param {string} [message = Commit from script]
  * @param {Options} [options = {}]
  * @returns {Promise<null|number>} `null` if directory is not a git repository, `number` of commit changes if directory is a git repository
  * @example
