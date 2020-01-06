@@ -49,7 +49,7 @@ If repository is dirty, the changes will be stashed, committed and optionally pu
 
 | Param | Type | Default |
 | --- | --- | --- |
-| [message] | <code>string</code> | <code>&quot;\&quot;Commit from script\&quot;&quot;</code> | 
+| [message] | <code>string</code> | <code>&quot;Commit from script&quot;</code> | 
 | [options] | <code>Options</code> | <code>{}</code> | 
 
 **Example**  
