@@ -1,11 +1,14 @@
 # git-flush
 
 
-Commits and pushes if repository is dirty. Does nothing otherwise.
+<a href="https://actions-badge.atrox.dev/Jaid/git-flush/goto"><img src="https://img.shields.io/endpoint.svg?style=flat-square&url=https%3A%2F%2Factions-badge.atrox.dev%2FJaid%2Fgit-flush%2Fbadge" alt="Build status"/></a> <a href="https://raw.githubusercontent.com/Jaid/git-flush/master/license.txt"><img src="https://img.shields.io/github/license/Jaid/git-flush?style=flat-square" alt="License"/></a>  
+<a href="https://github.com/Jaid/git-flush/commits"><img src="https://img.shields.io/github/commits-since/Jaid/git-flush/v2.0.1?style=flat-square&logo=github" alt="Commits since v2.0.1"/></a> <a href="https://github.com/Jaid/git-flush/commits"><img src="https://img.shields.io/github/last-commit/Jaid/git-flush?style=flat-square&logo=github" alt="Last commit"/></a> <a href="https://github.com/Jaid/git-flush/issues"><img src="https://img.shields.io/github/issues/Jaid/git-flush?style=flat-square&logo=github" alt="Issues"/></a>  
+<a href="https://npmjs.com/package/git-flush"><img src="https://img.shields.io/npm/v/git-flush?style=flat-square&logo=npm&label=latest%20version" alt="Latest version on npm"/></a> <a href="https://github.com/Jaid/git-flush/network/dependents"><img src="https://img.shields.io/librariesio/dependents/npm/git-flush?style=flat-square&logo=npm" alt="Dependents"/></a> <a href="https://npmjs.com/package/git-flush"><img src="https://img.shields.io/npm/dm/git-flush?style=flat-square&logo=npm" alt="Downloads"/></a>
 
-<a href="https://raw.githubusercontent.com/Jaid/git-flush/master/license.txt"><img src="https://img.shields.io/github/license/Jaid/git-flush?style=flat-square&color=success" alt="License"/></a>  
-<a href="https://github.com/Jaid/git-flush/commits"><img src="https://img.shields.io/github/commits-since/Jaid/git-flush/v2.0.1?style=flat-square&logo=github&color=success" alt="Commits since v2.0.1"/></a> <a href="https://github.com/Jaid/git-flush/commits"><img src="https://img.shields.io/github/last-commit/Jaid/git-flush?style=flat-square&logo=github&color=red" alt="Last commit"/></a> <a href="https://github.com/Jaid/git-flush/issues"><img src="https://img.shields.io/github/issues/Jaid/git-flush?style=flat-square&logo=github&color=red" alt="Issues"/></a>  
-<a href="https://npmjs.com/package/git-flush"><img src="https://img.shields.io/npm/v/git-flush?style=flat-square&logo=npm&label=latest%20version&color=success" alt="Latest version on npm"/></a> <a href="https://github.com/Jaid/git-flush/network/dependents"><img src="https://img.shields.io/librariesio/dependents/npm/git-flush?style=flat-square&logo=npm&color=red" alt="Dependents"/></a> <a href="https://npmjs.com/package/git-flush"><img src="https://img.shields.io/npm/dm/git-flush?style=flat-square&logo=npm&color=red" alt="Downloads"/></a>
+**Commits and pushes if repository is dirty. Does nothing otherwise.**
+
+
+
 
 
 
@@ -32,16 +35,16 @@ yarn add git-flush@^2.0.1
 ## Reference
 
 * [git-flush](#module_git-flush)
-    * [module.exports([message], [options])](#exp_module_git-flush--module.exports) ⇒ <code>Promise.&lt;(null\|number)&gt;</code> ⏏
-        * [~normalizedOptions](#module_git-flush--module.exports..normalizedOptions) : <code>Options</code>
-        * [~Options](#module_git-flush--module.exports..Options) : <code>Object</code>
+    * [~_default([message], [options])](#module_git-flush.._default) ⇒ <code>Promise.&lt;(null\|number)&gt;</code>
+        * [~normalizedOptions](#module_git-flush.._default..normalizedOptions) : <code>Options</code>
+    * [~Options](#module_git-flush..Options) : <code>Object</code>
 
-<a name="exp_module_git-flush--module.exports"></a>
+<a name="module_git-flush.._default"></a>
 
-### module.exports([message], [options]) ⇒ <code>Promise.&lt;(null\|number)&gt;</code> ⏏
+### git-flush~\_default([message], [options]) ⇒ <code>Promise.&lt;(null\|number)&gt;</code>
 If repository is dirty, the changes will be stashed, committed and optionally pushed. If repository is clean, does nothing.
 
-**Kind**: Exported function  
+**Kind**: inner method of [<code>git-flush</code>](#module_git-flush)  
 **Returns**: <code>Promise.&lt;(null\|number)&gt;</code> - `null` if directory is not a git repository, `number` of commit changes if directory is a git repository  
 
 | Param | Type | Default |
@@ -54,14 +57,14 @@ If repository is dirty, the changes will be stashed, committed and optionally pu
 import gitFlush from "git-flush"
 const result = await gitFlush("Commit message")
 ```
-<a name="module_git-flush--module.exports..normalizedOptions"></a>
+<a name="module_git-flush.._default..normalizedOptions"></a>
 
-#### module.exports~normalizedOptions : <code>Options</code>
-**Kind**: inner constant of [<code>module.exports</code>](#exp_module_git-flush--module.exports)  
-<a name="module_git-flush--module.exports..Options"></a>
+#### _default~normalizedOptions : <code>Options</code>
+**Kind**: inner constant of [<code>\_default</code>](#module_git-flush.._default)  
+<a name="module_git-flush..Options"></a>
 
-#### module.exports~Options : <code>Object</code>
-**Kind**: inner typedef of [<code>module.exports</code>](#exp_module_git-flush--module.exports)  
+### git-flush~Options : <code>Object</code>
+**Kind**: inner typedef of [<code>git-flush</code>](#module_git-flush)  
 **Properties**
 
 | Name | Type | Description |
@@ -73,13 +76,31 @@ const result = await gitFlush("Commit message")
 
 
 
+## Development
+
+
+
+Setting up:
+```bash
+git clone git@github.com:Jaid/git-flush.git
+cd git-flush
+npm install
+```
+Testing:
+```bash
+npm run test:dev
+```
+Testing in production environment:
+```bash
+npm run test
+```
 
 
 ## License
 ```text
 MIT License
 
-Copyright © 2019, Jaid <jaid.jsx@gmail.com> (github.com/jaid)
+Copyright © 2020, Jaid <jaid.jsx@gmail.com> (github.com/jaid)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
