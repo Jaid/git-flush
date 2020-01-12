@@ -1,11 +1,14 @@
 # git-flush
 
 
-<a href="https://actions-badge.atrox.dev/Jaid/git-flush/goto"><img src="https://img.shields.io/endpoint.svg?style=flat-square&url=https%3A%2F%2Factions-badge.atrox.dev%2FJaid%2Fgit-flush%2Fbadge" alt="Build status"/></a> <a href="https://raw.githubusercontent.com/Jaid/git-flush/master/license.txt"><img src="https://img.shields.io/github/license/Jaid/git-flush?style=flat-square" alt="License"/></a>  
-<a href="https://github.com/Jaid/git-flush/commits"><img src="https://img.shields.io/github/commits-since/Jaid/git-flush/v2.0.3?style=flat-square&logo=github" alt="Commits since v2.0.3"/></a> <a href="https://github.com/Jaid/git-flush/commits"><img src="https://img.shields.io/github/last-commit/Jaid/git-flush?style=flat-square&logo=github" alt="Last commit"/></a> <a href="https://github.com/Jaid/git-flush/issues"><img src="https://img.shields.io/github/issues/Jaid/git-flush?style=flat-square&logo=github" alt="Issues"/></a>  
+<a href="https://raw.githubusercontent.com/Jaid/git-flush/master/license.txt"><img src="https://img.shields.io/github/license/Jaid/git-flush?style=flat-square" alt="License"/></a>  
+<a href="https://actions-badge.atrox.dev/Jaid/git-flush/goto"><img src="https://img.shields.io/endpoint.svg?style=flat-square&url=https%3A%2F%2Factions-badge.atrox.dev%2FJaid%2Fgit-flush%2Fbadge" alt="Build status"/></a> <a href="https://github.com/Jaid/git-flush/commits"><img src="https://img.shields.io/github/commits-since/Jaid/git-flush/v2.0.3?style=flat-square&logo=github" alt="Commits since v2.0.3"/></a> <a href="https://github.com/Jaid/git-flush/commits"><img src="https://img.shields.io/github/last-commit/Jaid/git-flush?style=flat-square&logo=github" alt="Last commit"/></a> <a href="https://github.com/Jaid/git-flush/issues"><img src="https://img.shields.io/github/issues/Jaid/git-flush?style=flat-square&logo=github" alt="Issues"/></a>  
 <a href="https://npmjs.com/package/git-flush"><img src="https://img.shields.io/npm/v/git-flush?style=flat-square&logo=npm&label=latest%20version" alt="Latest version on npm"/></a> <a href="https://github.com/Jaid/git-flush/network/dependents"><img src="https://img.shields.io/librariesio/dependents/npm/git-flush?style=flat-square&logo=npm" alt="Dependents"/></a> <a href="https://npmjs.com/package/git-flush"><img src="https://img.shields.io/npm/dm/git-flush?style=flat-square&logo=npm" alt="Downloads"/></a>
 
 **Commits and pushes if repository is dirty. Does nothing otherwise.**
+
+
+
 
 
 
@@ -30,48 +33,7 @@ yarn add git-flush@^2.0.3
 
 
 
-<a name="module_git-flush"></a>
 
-## Reference
-
-* [git-flush](#module_git-flush)
-    * [~_default([message], [options])](#module_git-flush.._default) ⇒ <code>Promise.&lt;(null\|number)&gt;</code>
-        * [~normalizedOptions](#module_git-flush.._default..normalizedOptions) : <code>Options</code>
-    * [~Options](#module_git-flush..Options) : <code>Object</code>
-
-<a name="module_git-flush.._default"></a>
-
-### git-flush~\_default([message], [options]) ⇒ <code>Promise.&lt;(null\|number)&gt;</code>
-If repository is dirty, the changes will be stashed, committed and optionally pushed. If repository is clean, does nothing.
-
-**Kind**: inner method of [<code>git-flush</code>](#module_git-flush)  
-**Returns**: <code>Promise.&lt;(null\|number)&gt;</code> - `null` if directory is not a git repository, `number` of commit changes if directory is a git repository  
-
-| Param | Type | Default |
-| --- | --- | --- |
-| [message] | <code>string</code> | <code>&quot;Commit from script&quot;</code> | 
-| [options] | <code>Options</code> | <code>{}</code> | 
-
-**Example**  
-```javascript
-import gitFlush from "git-flush"
-const result = await gitFlush("Commit message")
-```
-<a name="module_git-flush.._default..normalizedOptions"></a>
-
-#### _default~normalizedOptions : <code>Options</code>
-**Kind**: inner constant of [<code>\_default</code>](#module_git-flush.._default)  
-<a name="module_git-flush..Options"></a>
-
-### git-flush~Options : <code>Object</code>
-**Kind**: inner typedef of [<code>git-flush</code>](#module_git-flush)  
-**Properties**
-
-| Name | Type | Description |
-| --- | --- | --- |
-| directory | <code>string</code> | Path to the git repository |
-| push | <code>boolean</code> | If `true`, pushes after committing |
-| pull | <code>boolean</code> | If `true`, pulls before committing |
 
 
 
