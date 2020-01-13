@@ -37,5 +37,6 @@
     "prepareActionJest": "npm run build:prod"
   },
   "name": "git-flush",
-  "description": "Commits and pushes if repository is dirty. Does nothing otherwise."
+  "description": "Commits and pushes if repository is dirty. Does nothing otherwise.",
+  "funding": "https://github.com/sponsors/jaid"
 }
