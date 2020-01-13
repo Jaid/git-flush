@@ -38,5 +38,9 @@
   },
   "name": "git-flush",
   "description": "Commits and pushes if repository is dirty. Does nothing otherwise.",
-  "funding": "https://github.com/sponsors/jaid"
+  "funding": "https://github.com/sponsors/jaid",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jaid/git-flush"
+  }
 }
