@@ -1,9 +1,9 @@
 # git-flush
 
 
-<a href="https://raw.githubusercontent.com/Jaid/git-flush/master/license.txt"><img src="https://img.shields.io/github/license/Jaid/git-flush?style=flat-square" alt="License"/></a>  
-<a href="https://actions-badge.atrox.dev/Jaid/git-flush/goto"><img src="https://img.shields.io/endpoint.svg?style=flat-square&url=https%3A%2F%2Factions-badge.atrox.dev%2FJaid%2Fgit-flush%2Fbadge" alt="Build status"/></a> <a href="https://github.com/Jaid/git-flush/commits"><img src="https://img.shields.io/github/commits-since/Jaid/git-flush/v2.0.3?style=flat-square&logo=github" alt="Commits since v2.0.3"/></a> <a href="https://github.com/Jaid/git-flush/commits"><img src="https://img.shields.io/github/last-commit/Jaid/git-flush?style=flat-square&logo=github" alt="Last commit"/></a> <a href="https://github.com/Jaid/git-flush/issues"><img src="https://img.shields.io/github/issues/Jaid/git-flush?style=flat-square&logo=github" alt="Issues"/></a>  
-<a href="https://npmjs.com/package/git-flush"><img src="https://img.shields.io/npm/v/git-flush?style=flat-square&logo=npm&label=latest%20version" alt="Latest version on npm"/></a> <a href="https://github.com/Jaid/git-flush/network/dependents"><img src="https://img.shields.io/librariesio/dependents/npm/git-flush?style=flat-square&logo=npm" alt="Dependents"/></a> <a href="https://npmjs.com/package/git-flush"><img src="https://img.shields.io/npm/dm/git-flush?style=flat-square&logo=npm" alt="Downloads"/></a>
+<a href="https://raw.githubusercontent.com/jaid/git-flush/master/license.txt"><img src="https://img.shields.io/github/license/jaid/git-flush?style=flat-square" alt="License"/></a> <a href="https://github.com/sponsors/jaid"><img src="https://img.shields.io/badge/<3-Sponsor-FF45F1?style=flat-square" alt="Sponsor git-flush"/></a>
+<a href="https://actions-badge.atrox.dev/jaid/git-flush/goto"><img src="https://img.shields.io/endpoint.svg?style=flat-square&url=https%3A%2F%2Factions-badge.atrox.dev%2Fjaid%2Fgit-flush%2Fbadge" alt="Build status"/></a> <a href="https://github.com/jaid/git-flush/commits"><img src="https://img.shields.io/github/commits-since/jaid/git-flush/v2.0.3?style=flat-square&logo=github" alt="Commits since v2.0.3"/></a> <a href="https://github.com/jaid/git-flush/commits"><img src="https://img.shields.io/github/last-commit/jaid/git-flush?style=flat-square&logo=github" alt="Last commit"/></a> <a href="https://github.com/jaid/git-flush/issues"><img src="https://img.shields.io/github/issues/jaid/git-flush?style=flat-square&logo=github" alt="Issues"/></a>  
+<a href="https://npmjs.com/package/git-flush"><img src="https://img.shields.io/npm/v/git-flush?style=flat-square&logo=npm&label=latest%20version" alt="Latest version on npm"/></a> <a href="https://github.com/jaid/git-flush/network/dependents"><img src="https://img.shields.io/librariesio/dependents/npm/git-flush?style=flat-square&logo=npm" alt="Dependents"/></a> <a href="https://npmjs.com/package/git-flush"><img src="https://img.shields.io/npm/dm/git-flush?style=flat-square&logo=npm" alt="Downloads"/></a>
 
 **Commits and pushes if repository is dirty. Does nothing otherwise.**
 
@@ -37,14 +37,13 @@ yarn add git-flush@^2.0.3
 
 
 
-
 ## Development
 
 
 
 Setting up:
 ```bash
-git clone git@github.com:Jaid/git-flush.git
+git clone git@github.com:jaid/git-flush.git
 cd git-flush
 npm install
 ```
