@@ -42,5 +42,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/jaid/git-flush"
-  }
+  },
+  "homepage": "https://github.com/Jaid/git-flush",
+  "keywords": []
 }
