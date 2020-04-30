@@ -43,5 +43,15 @@
     "url": "https://github.com/jaid/git-flush"
   },
   "homepage": "https://github.com/Jaid/git-flush",
-  "keywords": []
+  "keywords": [
+    "git",
+    "git-commit",
+    "git-flush",
+    "git-push",
+    "lib",
+    "library",
+    "promise",
+    "util",
+    "utility"
+  ]
 }
