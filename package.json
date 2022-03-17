@@ -4,7 +4,7 @@
   "author": "Jaid <jaid.jsx@gmail.com> (https://github.com/Jaid)",
   "dependencies": {
     "debug": "^4.1.1",
-    "simple-git": "^1.132.0"
+    "simple-git": "^3.3.0"
   },
   "devDependencies": {
     "@absolunet/fsp": "^1.6.2",
